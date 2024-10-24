@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .progress-bar {
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background-color: #4caf50;
+            width: 0;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="container p-6 bg-white rounded-lg shadow-lg flex gap-5 flex-col items-center">
+        <div class="progress-bar w-full mt-4">
+            <div id="progress" class="progress"></div>
+        </div>
+        <button id="downloadButton" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">Download</button>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

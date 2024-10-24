@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Johnson - UI/UX Designer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5f5f5;
+            --text-color: #333;
+            --light-text: #fff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        header {
+            background: var(--primary-color);
+            color: var(--light-text);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1600x900/?design') no-repeat center center/cover;
+            height: 100vh;
+            position: relative;
+            color: var(--light-text);
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-content {
+            background: rgba(0,0,0,0.6);
+            padding: 3rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-content img {
+            width: 180px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--primary-color);
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem auto;
+            font-weight: 300;
+        }
+        section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .about-content, .skills-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+        }
+        .about-text, .skills-list {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+        }
+        .about-image, .skills-image {
+            flex: 1;
+            text-align: center;
+        }
+        .about-image img, .skills-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .about-image img:hover, .skills-image img:hover {
+            transform: scale(1.05);
+        }
+        .skills-list ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skills-list ul li {
+            background: var(--primary-color);
+            color: var(--light-text);
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .skills-list ul li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+        }
+        .contact {
+            background: var(--light-text);
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact form input, .contact form textarea {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact form button {
+            background: var(--primary-color);
+            color: var(--light-text);
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .contact form button:hover {
+            background: #3a7bc8;
+        }
+        footer {
+            background: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Emily Johnson</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Emily Johnson">
+                <h2>Emily Johnson</h2>
+                <p>Crafting intuitive digital experiences in New York, USA</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>As a passionate UI/UX designer based in the vibrant city of New York, I bring creativity and user-centric thinking to every project. My mission is to craft interfaces that not only captivate visually but also provide seamless, intuitive experiences for users across diverse platforms.</p>
+                    <p>With a keen eye for detail and a deep understanding of user behavior, I strive to bridge the gap between human needs and digital solutions. My approach combines aesthetic appeal with functional design, ensuring that every element serves a purpose in enhancing user satisfaction.</p>
+                </div>
+                <!-- <div class="about-image">
+                    <img src="https://source.unsplash.com/random/600x400/?designer" alt="Designer at work">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-content">
+                <div class="skills-list">
+                    <ul>
+                        <li>UI/UX Design</li>
+                        <li>Figma</li>
+                        <li>Sketch</li>
+                        <li>Adobe XD</li>
+                        <li>Prototyping</li>
+                        <li>Wireframing</li>
+                        <li>User Research</li>
+                        <li>User Testing</li>
+                        <li>Interaction Design</li>
+                        <li>Information Architecture</li>
+                    </ul>
+                </div>
+                <!-- <div class="skills-image">
+                    <img src="https://source.unsplash.com/random/600x400/?uxdesign" alt="UX Design Process">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Emily Johnson. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
